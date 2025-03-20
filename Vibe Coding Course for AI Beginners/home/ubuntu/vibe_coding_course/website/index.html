@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding with AI | Learn to Build Software Without Prior Coding Knowledge</title>
+    <meta name="description" content="Learn vibe coding with AI - a revolutionary approach to building software without prior coding knowledge. Comprehensive course with step-by-step guides.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/additional.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Fira+Code:wght@400;500&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        code, pre {
+            font-family: 'Fira Code', monospace;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-text-light min-h-screen flex flex-col">
+    <!-- Header with AI Report branding -->
+    <header class="bg-ai-report-burgundy shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="rounded-lg bg-ai-report-burgundy p-2 mr-2">
+                        <span class="text-white font-bold text-xl">AI</span>
+                    </div>
+                    <h1 class="text-white text-2xl font-bold">Vibe Coding Course</h1>
+                </div>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="index.html" class="nav-link nav-link-active">Home</a>
+                    <a href="pages/about.html" class="nav-link">About</a>
+                    <a href="pages/course.html" class="nav-link">Course Content</a>
+                    <a href="pages/resources.html" class="nav-link">Resources</a>
+                    <a href="pages/faq.html" class="nav-link">FAQ</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="index.html" class="nav-link block">Home</a>
+                <a href="pages/about.html" class="nav-link block">About</a>
+                <a href="pages/course.html" class="nav-link block">Course Content</a>
+                <a href="pages/resources.html" class="nav-link block">Resources</a>
+                <a href="pages/faq.html" class="nav-link block">FAQ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-accent">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">Build Software with AI, No Coding Experience Required</h1>
+                    <p class="text-xl text-gray-200 mb-8">Learn vibe coding - the revolutionary approach to creating applications by describing what you want in natural language and letting AI handle the code.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="pages/course.html" class="btn bg-white text-primary hover:bg-gray-100 font-bold text-lg px-8 py-3">Start Learning</a>
+                        <a href="pages/about.html" class="btn btn-outline text-white border-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-3">Learn More</a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="bg-gray-800 rounded-lg p-6 shadow-xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <div class="ml-4 text-gray-400 text-sm">cursor.ai</div>
+                        </div>
+                        <div class="bg-gray-900 rounded p-4 font-mono text-sm">
+                            <div class="flex mb-4">
+                                <span class="text-blue-400 mr-2">User:</span>
+                                <span class="text-gray-300">Create a weather app that shows current conditions and 5-day forecast</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-400 mr-2">AI:</span>
+                                <div>
+                                    <span class="text-gray-300">I'll create a weather app for you. Here's the code:</span>
+                                    <pre class="mt-2 p-3 bg-gray-800 rounded overflow-x-auto text-xs"><code class="text-gray-300"><span class="text-purple-400">import</span> streamlit <span class="text-purple-400">as</span> st
+<span class="text-purple-400">import</span> requests
+<span class="text-purple-400">from</span> datetime <span class="text-purple-400">import</span> datetime
+
+<span class="text-green-400"># Set page configuration</span>
+st.set_page_config(
+    page_title=<span class="text-yellow-300">"Weather App"</span>,
+    page_icon=<span class="text-yellow-300">"🌤️"</span>,
+    layout=<span class="text-yellow-300">"centered"</span>
+)
+
+<span class="text-green-400"># App title</span>
+st.title(<span class="text-yellow-300">"Weather Dashboard 🌤️"</span>)
+
+<span class="text-green-400"># Input for city name</span>
+city = st.text_input(<span class="text-yellow-300">"Enter City Name:"</span>, <span class="text-yellow-300">"New York"</span>)
+
+<span class="text-green-400"># API key and URL</span>
+api_key = <span class="text-yellow-300">"YOUR_API_KEY"</span>  <span class="text-green-400"># Replace with your OpenWeatherMap API key</span>
+weather_url = f<span class="text-yellow-300">"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"</span>
+forecast_url = f<span class="text-yellow-300">"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric"</span>
+
+<span class="text-purple-400">if</span> st.button(<span class="text-yellow-300">"Get Weather"</span>):
+    <span class="text-purple-400">try</span>:
+        <span class="text-green-400"># Get current weather data</span>
+        response = requests.get(weather_url)
+        data = response.json()
+        
+        <span class="text-green-400"># Display current weather</span>
+        st.subheader(f<span class="text-yellow-300">"Current Weather in {city}"</span>)
+        col1, col2 = st.columns(2)
+        
+        <span class="text-purple-400">with</span> col1:
+            temp = data[<span class="text-yellow-300">'main'</span>][<span class="text-yellow-300">'temp'</span>]
+            st.metric(<span class="text-yellow-300">"Temperature"</span>, f<span class="text-yellow-300">"{temp} °C"</span>)
+            humidity = data[<span class="text-yellow-300">'main'</span>][<span class="text-yellow-300">'humidity'</span>]
+            st.metric(<span class="text-yellow-300">"Humidity"</span>, f<span class="text-yellow-300">"{humidity}%"</span>)
+        
+        <span class="text-purple-400">with</span> col2:
+            weather_desc = data[<span class="text-yellow-300">'weather'</span>][0][<span class="text-yellow-300">'description'</span>].capitalize()
+            st.write(f<span class="text-yellow-300">"**Condition:** {weather_desc}"</span>)
+            wind_speed = data[<span class="text-yellow-300">'wind'</span>][<span class="text-yellow-300">'speed'</span>]
+            st.metric(<span class="text-yellow-300">"Wind Speed"</span>, f<span class="text-yellow-300">"{wind_speed} m/s"</span>)
+            
+        <span class="text-green-400"># Get forecast data</span>
+        forecast_response = requests.get(forecast_url)
+        forecast_data = forecast_response.json()
+        
+        <span class="text-green-400"># Display 5-day forecast</span>
+        st.subheader(<span class="text-yellow-300">"5-Day Forecast"</span>)
+        forecast_items = forecast_data[<span class="text-yellow-300">'list'</span>][::8]  <span class="text-green-400"># Get data every 24 hours</span>
+        
+        cols = st.columns(len(forecast_items))
+        <span class="text-purple-400">for</span> i, item <span class="text-purple-400">in</span> enumerate(forecast_items):
+            date = datetime.fromtimestamp(item[<span class="text-yellow-300">'dt'</span>]).strftime(<span class="text-yellow-300">"%a, %b %d"</span>)
+            temp = item[<span class="text-yellow-300">'main'</span>][<span class="text-yellow-300">'temp'</span>]
+            weather = item[<span class="text-yellow-300">'weather'</span>][0][<span class="text-yellow-300">'main'</span>]
+            
+            <span class="text-purple-400">with</span> cols[i]:
+                st.write(f<span class="text-yellow-300">"**{date}**"</span>)
+                st.write(f<span class="text-yellow-300">"{weather}"</span>)
+                st.write(f<span class="text-yellow-300">"{temp} °C"</span>)
+    
+    <span class="text-purple-400">except</span> Exception <span class="text-purple-400">as</span> e:
+        st.error(f<span class="text-yellow-300">"Error: {e}"</span>)
+        st.error(<span class="text-yellow-300">"Please check the city name and try again."</span>)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Why Learn Vibe Coding?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card">
+                    <div class="text-center mb-6">
+                        <div class="inline-block p-3 rounded-full bg-primary-dark mb-4">
+                            <i class="fas fa-rocket text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">No Coding Experience Required</h3>
+                    </div>
+                    <p>Build software without learning complex programming languages or syntax. Simply describe what you want in natural language and let AI handle the technical details.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="card">
+                    <div class="text-center mb-6">
+                        <div class="inline-block p-3 rounded-full bg-secondary mb-4">
+                            <i class="fas fa-bolt text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Rapid Development</h3>
+                    </div>
+                    <p>Create applications in a fraction of the time it would take with traditional coding. Vibe coding accelerates development by generating code based on your descriptions.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="card">
+                    <div class="text-center mb-6">
+                        <div class="inline-block p-3 rounded-full bg-accent mb-4">
+                            <i class="fas fa-lightbulb text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Focus on Ideas, Not Implementation</h3>
+                    </div>
+                    <p>Concentrate on what you want to build rather than how to build it. Vibe coding lets you focus on your creative vision while AI handles the technical implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Course Overview</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">What You'll Learn</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Understanding vibe coding and its applications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Installing and setting up Cursor AI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Effective prompt writing for code generation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Building a complete weather application</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Advanced vibe coding strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Creating your own portfolio of projects</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Course Structure</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold">1</span>
+                            </div>
+                            <span><strong>Module 1:</strong> Introduction to Vibe Coding</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold">2</span>
+                            </div>
+                            <span><strong>Module 2:</strong> Getting Started with Cursor</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold">3</span>
+                            </div>
+                            <span><strong>Module 3:</strong> Core Vibe Coding Techniques</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold">4</span>
+                            </div>
+                            <span><strong>Module 4:</strong> Practical Project - Weather App</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold">5</span>
+                            </div>
+                            <span><strong>Module 5:</strong> Advanced Vibe Coding Strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                <span class="text-white font-bold">6</span>
+                            </div>
+                            <span><strong>Module 6:</strong> Building Your Portfolio</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="pages/course.html" class="btn btn-primary">View Full Course Content</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Try Vibe Coding</h2>
+            
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4">Interactive Demo: Vibe Coding Quiz</h3>
+                <p class="mb-6">Test your understanding of vibe coding concepts with this interactive quiz. Select the best answer for each question.</p>
+                
+                <div id="quiz-container">
+                    <div class="quiz-question active" data-question="1">
+                        <h4 class="font-bold text-lg mb-3">Question 1: What is vibe coding?</h4>
+                        <div class="space-y-3">
+                            <div class="quiz-option">
+                                <input type="radio" id="q1-a" name="q1" value="a">
+                                <label for="q1-a" class="ml-2">A traditional programming approach that requires learning syntax</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1-b" name="q1" value="b">
+                                <label for="q1-b" class="ml-2">An AI-dependent programming practice where you describe what you want in natural language</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1-c" name="q1" value="c">
+                                <label for="q1-c" class="ml-2">A visual programming language with drag-and-drop blocks</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q1-d" name="q1" value="d">
+                                <label for="q1-d" class="ml-2">A programming style focused on creating visually appealing interfaces</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question hidden" data-question="2">
+                        <h4 class="font-bold text-lg mb-3">Question 2: Who coined the term "vibe coding"?</h4>
+                        <div class="space-y-3">
+                            <div class="quiz-option">
+                                <input type="radio" id="q2-a" name="q2" value="a">
+                                <label for="q2-a" class="ml-2">Bill Gates</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2-b" name="q2" value="b">
+                                <label for="q2-b" class="ml-2">Andrej Karpathy</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2-c" name="q2" value="c">
+                                <label for="q2-c" class="ml-2">Sam Altman</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q2-d" name="q2" value="d">
+                                <label for="q2-d" class="ml-2">Elon Musk</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question hidden" data-question="3">
+                        <h4 class="font-bold text-lg mb-3">Question 3: What is a key limitation of vibe coding?</h4>
+                        <div class="space-y-3">
+                            <div class="quiz-option">
+                                <input type="radio" id="q3-a" name="q3" value="a">
+                                <label for="q3-a" class="ml-2">It can only be used for simple projects</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3-b" name="q3" value="b">
+                                <label for="q3-b" class="ml-2">It requires extensive programming knowledge</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3-c" name="q3" value="c">
+                                <label for="q3-c" class="ml-2">Debugging can be challenging when you don't understand the generated code</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" id="q3-d" name="q3" value="d">
+                                <label for="q3-d" class="ml-2">It only works on Windows computers</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-result hidden">
+                        <h4 class="font-bold text-lg mb-3">Quiz Results</h4>
+                        <p id="quiz-score" class="mb-4">You scored: <span>0</span>/3</p>
+                        <div id="quiz-feedback" class="p-4 rounded-lg bg-gray-700 mb-4"></div>
+                        <button id="retry-quiz" class="btn btn-secondary">Try Again</button>
+                    </div>
+                    
+                    <div class="flex justify-between mt-6">
+                        <button id="prev-question" class="btn btn-outline disabled:opacity-50 disabled:cursor-not-allowed" disabled>Previous</button>
+                        <button id="next-question" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">What People Are Saying</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-dark flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-xl">S</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah T.</h4>
+                            <p class="text-gray-400">Marketing Specialist</p>
+                        </div>
+                    </div>
+                    <p class="italic">"I never thought I could build my own web app without learning to code. Vibe coding with AI has completely changed what's possible for me. I created a custom marketing analytics dashboard in just a few hours!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael R.</h4>
+                            <p class="text-gray-400">Teacher</p>
+                        </div>
+                    </div>
+                    <p class="italic">"As an educator with no technical background, I was able to create educational tools for my students using vibe coding. The course made it easy to understand how to effectively communicate with AI to get the results I wanted."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-xl">J</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Jamie L.</h4>
+                            <p class="text-gray-400">Experienced Developer</p>
+                        </div>
+                    </div>
+                    <p class="italic">"Even as someone who's been coding for years, vibe coding has dramatically increased my productivity. For prototyping and quick projects, it's a game-changer. This course provides excellent guidance on when and how to use these techniques effectively."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-br from-primary to-accent">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white">Ready to Start Your Vibe Coding Journey?</h2>
+            <p class="text-xl mb-8 text-gray-200">Join our comprehensive course and learn to build software with AI - no coding experience required!</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="pages/course.html" class="btn bg-white text-primary hover:bg-gray-100 font-bold text-lg px-8 py-3">Start the Course</a>
+                <a href="pages/resources.html" class="btn btn-outline text-white border-white hover:bg-white hover:text-primary font-bold text-lg px-8 py-3">Explore Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="rounded-lg bg-ai-report-burgundy p-2 mr-2">
+                            <span class="text-white font-bold text-xl">AI</span>
+                        </div>
+                        <h3 class="text-white text-xl font-bold">Vibe Coding Course</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-md">Learn to build software with AI without prior coding knowledge. A comprehensive course on vibe coding techniques.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Course</h4>
+                        <ul class="space-y-2">
+                            <li><a href="pages/course.html#module1" class="text-gray-400 hover:text-white">Introduction</a></li>
+                            <li><a href="pages/course.html#module2" class="text-gray-400 hover:text-white">Getting Started</a></li>
+                            <li><a href="pages/course.html#module3" class="text-gray-400 hover:text-white">Core Techniques</a></li>
+                            <li><a href="pages/course.html#module4" class="text-gray-400 hover:text-white">Weather App</a></li>
+                            <li><a href="pages/course.html#module5" class="text-gray-400 hover:text-white">Advanced Strategies</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="pages/resources.html#installation" class="text-gray-400 hover:text-white">Installation Guide</a></li>
+                            <li><a href="pages/resources.html#tutorial" class="text-gray-400 hover:text-white">Cursor Basics</a></li>
+                            <li><a href="pages/resources.html#project" class="text-gray-400 hover:text-white">Project Guide</a></li>
+                            <li><a href="pages/resources.html#additional" class="text-gray-400 hover:text-white">Additional Resources</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="pages/about.html" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="pages/faq.html" class="text-gray-400 hover:text-white">FAQ</a></li>
+                            <li><a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">Cursor Website</a></li>
+                            <li><a href="https://aireport.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">AI Report</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 Vibe Coding Course. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Quiz functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const quizQuestions = document.querySelectorAll('.quiz-question');
+            const quizResult = document.querySelector('.quiz-result');
+            const prevButton = document.getElementById('prev-question');
+            const nextButton = document.getElementById('next-question');
+            const retryButton = document.getElementById('retry-quiz');
+            const scoreElement = document.querySelector('#quiz-score span');
+            const feedbackElement = document.getElementById('quiz-feedback');
+            
+            let currentQuestion = 1;
+            const totalQuestions = quizQuestions.length;
+            const correctAnswers = {
+                'q1': 'b',
+                'q2': 'b',
+                'q3': 'c'
+            };
+            
+            // Show a specific question
+            function showQuestion(questionNumber) {
+                quizQuestions.forEach(question => {
+                    question.classList.add('hidden');
+                });
+                
+                document.querySelector(`.quiz-question[data-question="${questionNumber}"]`).classList.remove('hidden');
+                
+                // Update button states
+                prevButton.disabled = questionNumber === 1;
+                nextButton.textContent = questionNumber === totalQuestions ? 'Submit' : 'Next';
+            }
+            
+            // Handle next button click
+            nextButton.addEventListener('click', function() {
+                if (currentQuestion < totalQuestions) {
+                    currentQuestion++;
+                    showQuestion(currentQuestion);
+                } else {
+                    // Show results
+                    showResults();
+                }
+            });
+            
+            // Handle previous button click
+            prevButton.addEventListener('click', function() {
+                if (currentQuestion > 1) {
+                    currentQuestion--;
+                    showQuestion(currentQuestion);
+                }
+            });
+            
+            // Show quiz results
+            function showResults() {
+                let score = 0;
+                let feedback = '';
+                
+                // Check answers
+                for (let i = 1; i <= totalQuestions; i++) {
+                    const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                    if (selectedOption) {
+                        if (selectedOption.value === correctAnswers[`q${i}`]) {
+                            score++;
+                        }
+                    }
+                }
+                
+                // Set feedback based on score
+                if (score === totalQuestions) {
+                    feedback = 'Excellent! You have a great understanding of vibe coding concepts.';
+                } else if (score >= totalQuestions / 2) {
+                    feedback = 'Good job! You have a basic understanding of vibe coding, but there\'s more to learn.';
+                } else {
+                    feedback = 'You might want to review the vibe coding concepts in Module 1 of the course.';
+                }
+                
+                // Update result elements
+                scoreElement.textContent = score;
+                feedbackElement.textContent = feedback;
+                
+                // Hide questions and show result
+                quizQuestions.forEach(question => {
+                    question.classList.add('hidden');
+                });
+                quizResult.classList.remove('hidden');
+                
+                // Hide navigation buttons
+                prevButton.classList.add('hidden');
+                nextButton.classList.add('hidden');
+            }
+            
+            // Handle retry button click
+            retryButton.addEventListener('click', function() {
+                // Reset form
+                document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                    radio.checked = false;
+                });
+                
+                // Show first question
+                currentQuestion = 1;
+                showQuestion(currentQuestion);
+                
+                // Hide result
+                quizResult.classList.add('hidden');
+                
+                // Show navigation buttons
+                prevButton.classList.remove('hidden');
+                nextButton.classList.remove('hidden');
+            });
+            
+            // Initialize quiz
+            showQuestion(currentQuestion);
+        });
+    </script>
+</body>
+</html>

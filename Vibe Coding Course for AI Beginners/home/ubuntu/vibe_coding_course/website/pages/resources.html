@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Vibe Coding with AI</title>
+    <meta name="description" content="Access installation guides, tutorials, and project resources for learning vibe coding with AI.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="stylesheet" href="../css/additional.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Fira+Code:wght@400;500&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        code, pre {
+            font-family: 'Fira Code', monospace;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-text-light min-h-screen flex flex-col">
+    <!-- Header with AI Report branding -->
+    <header class="bg-ai-report-burgundy shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="rounded-lg bg-ai-report-burgundy p-2 mr-2">
+                        <span class="text-white font-bold text-xl">AI</span>
+                    </div>
+                    <h1 class="text-white text-2xl font-bold">Vibe Coding Course</h1>
+                </div>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="course.html" class="nav-link">Course Content</a>
+                    <a href="resources.html" class="nav-link nav-link-active">Resources</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="../index.html" class="nav-link block">Home</a>
+                <a href="about.html" class="nav-link block">About</a>
+                <a href="course.html" class="nav-link block">Course Content</a>
+                <a href="resources.html" class="nav-link block">Resources</a>
+                <a href="faq.html" class="nav-link block">FAQ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-12 bg-gradient-to-r from-primary-dark to-accent">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4 text-white">Resources</h1>
+            <p class="text-xl text-gray-200 max-w-3xl mx-auto">Access guides, tutorials, and project resources to support your vibe coding journey.</p>
+        </div>
+    </section>
+
+    <!-- Resources Navigation -->
+    <section class="py-8 bg-gray-800 sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#installation" class="btn btn-primary">Installation Guide</a>
+                <a href="#tutorial" class="btn btn-primary">Cursor Basics</a>
+                <a href="#project" class="btn btn-primary">Weather App Project</a>
+                <a href="#additional" class="btn btn-primary">Additional Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Guide -->
+    <section id="installation" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Cursor Installation Guide</h2>
+            
+            <div class="card mb-8">
+                <h3 class="text-xl font-bold mb-4">System Requirements</h3>
+                <p class="mb-4">Before installing Cursor, ensure your system meets these minimum requirements:</p>
+                <ul class="space-y-2 mb-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span><strong>Windows:</strong> Windows 10 or later (64-bit)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span><strong>macOS:</strong> macOS 10.15 (Catalina) or later</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span><strong>Linux:</strong> Ubuntu 18.04 or later, or compatible distribution</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span><strong>RAM:</strong> 8GB minimum (16GB recommended)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span><strong>Storage:</strong> 1GB free disk space</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span><strong>Internet Connection:</strong> Required for AI features</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Windows Installation -->
+                <div class="card">
+                    <div class="text-center mb-4">
+                        <i class="fab fa-windows text-4xl text-secondary"></i>
+                        <h3 class="text-xl font-bold mt-2">Windows Installation</h3>
+                    </div>
+                    <ol class="space-y-4">
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                            <p>Visit <a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">cursor.com</a> and click the "Download" button</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                            <p>Locate the downloaded .exe file and right-click to "Run as administrator"</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                            <p>Follow the on-screen instructions to complete installation</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                            <p>Launch Cursor from the Start menu or desktop shortcut</p>
+                        </li>
+                    </ol>
+                </div>
+                
+                <!-- macOS Installation -->
+                <div class="card">
+                    <div class="text-center mb-4">
+                        <i class="fab fa-apple text-4xl text-secondary"></i>
+                        <h3 class="text-xl font-bold mt-2">macOS Installation</h3>
+                    </div>
+                    <ol class="space-y-4">
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                            <p>Visit <a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">cursor.com</a> and click the "Download" button</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                            <p>Open the downloaded .dmg file</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                            <p>Drag the Cursor icon to the Applications folder</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                            <p>Open Applications folder and click on Cursor to launch</p>
+                        </li>
+                    </ol>
+                </div>
+                
+                <!-- Linux Installation -->
+                <div class="card">
+                    <div class="text-center mb-4">
+                        <i class="fab fa-linux text-4xl text-secondary"></i>
+                        <h3 class="text-xl font-bold mt-2">Linux Installation</h3>
+                    </div>
+                    <ol class="space-y-4">
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                            <p>Visit <a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">cursor.com</a> and click the "Download" button</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                            <p>Select the appropriate package for your distribution (.deb or .rpm)</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                            <p>Install using package manager (e.g., <code>sudo dpkg -i cursor_X.X.X_amd64.deb</code>)</p>
+                        </li>
+                        <li class="flex">
+                            <span class="bg-secondary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                            <p>Launch from applications menu or terminal with <code>cursor</code></p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4">First-Time Setup</h3>
+                <p class="mb-4">When you first launch Cursor, you'll be guided through a setup process:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">1. Choose Keyboard Shortcuts</h4>
+                        <p>Select your preferred keyboard shortcut preset (VS Code, Sublime Text, JetBrains, etc.)</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">2. Select Language</h4>
+                        <p>Choose your preferred language for AI interactions</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">3. Configure Codebase Indexing</h4>
+                        <p>Decide whether to enable local codebase indexing for better AI suggestions</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">4. Install CLI Shortcuts</h4>
+                        <p>Choose whether to install <code>cursor</code> and <code>code</code> commands for terminal access</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">5. Import VS Code Settings</h4>
+                        <p>Option to import extensions, themes, and settings from VS Code</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">6. Set Data Preferences</h4>
+                        <p>Review and select your data sharing preferences for AI features</p>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <p>For a more detailed installation guide, refer to the <a href="https://docs.cursor.com/get-started/installation" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">official Cursor documentation</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursor Basics Tutorial -->
+    <section id="tutorial" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Cursor Basics Tutorial</h2>
+            
+            <div class="card mb-8">
+                <h3 class="text-xl font-bold mb-4">Understanding the Cursor Interface</h3>
+                <p class="mb-4">After installing Cursor and completing the initial setup, you'll be presented with the main interface:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">Editor Area</h4>
+                        <p>The central space where you'll write and edit code</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">File Explorer</h4>
+                        <p>Left sidebar showing your project files and folders</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">AI Panel</h4>
+                        <p>Right sidebar for AI interactions (Chat and Composer)</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">Status Bar</h4>
+                        <p>Bottom bar showing editor status and additional options</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-8">
+                <h3 class="text-xl font-bold mb-4">Essential AI Features for Vibe Coding</h3>
+                
+                <!-- AI Chat -->
+                <div class="mb-8">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-comments text-secondary text-2xl mr-3"></i>
+                        <h4 class="text-lg font-bold">AI Chat</h4>
+                    </div>
+                    <p class="mb-2">The AI Chat feature allows you to have a conversation with the AI about your code or project.</p>
+                    <div class="bg-gray-700 p-4 rounded-lg mb-4">
+                        <p class="font-bold mb-2">How to Access:</p>
+                        <ul class="space-y-1 mb-4">
+                            <li>Click the "Chat" tab in the AI Panel</li>
+                            <li>Use keyboard shortcut: Ctrl/Cmd+L</li>
+                        </ul>
+                        <p class="font-bold mb-2">Example Prompts:</p>
+                        <ul class="space-y-1">
+                            <li>"What does this function do?"</li>
+                            <li>"How can I optimize this code?"</li>
+                            <li>"Explain this error message to me"</li>
+                            <li>"What libraries should I use for a web scraping project?"</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Tab Completion -->
+                <div class="mb-8">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-keyboard text-secondary text-2xl mr-3"></i>
+                        <h4 class="text-lg font-bold">Tab Completion</h4>
+                    </div>
+                    <p class="mb-2">Cursor's Tab feature predicts your next edits and allows you to accept suggestions with a single keystroke.</p>
+                    <div class="bg-gray-700 p-4 rounded-lg mb-4">
+                        <p class="font-bold mb-2">How to Access:</p>
+                        <ul class="space-y-1 mb-4">
+                            <li>As you type, suggestions will appear automatically</li>
+                            <li>Press Tab to accept the suggestion</li>
+                        </ul>
+                        <p class="font-bold mb-2">Best Practices:</p>
+                        <ul class="space-y-1">
+                            <li>Type a few characters to get more accurate suggestions</li>
+                            <li>Use Tab to quickly complete common patterns</li>
+                            <li>Combine with comments to guide the AI's suggestions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Composer -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-magic text-secondary text-2xl mr-3"></i>
+                        <h4 class="text-lg font-bold">Composer</h4>
+                    </div>
+                    <p class="mb-2">Composer is Cursor's most powerful feature for vibe coding, allowing you to generate or modify entire blocks of code using natural language.</p>
+                    <div class="bg-gray-700 p-4 rounded-lg mb-4">
+                        <p class="font-bold mb-2">How to Access:</p>
+                        <ul class="space-y-1 mb-4">
+                            <li>Click the "Composer" tab in the AI Panel</li>
+                            <li>Use keyboard shortcut: Ctrl/Cmd+K</li>
+                        </ul>
+                        <p class="font-bold mb-2">How to Use:</p>
+                        <ol class="space-y-1 mb-4">
+                            <li>1. Select code you want to modify (optional)</li>
+                            <li>2. Open Composer</li>
+                            <li>3. Describe what you want in natural language</li>
+                            <li>4. Review the AI's suggestion</li>
+                            <li>5. Click "Apply" to insert the code</li>
+                        </ol>
+                        <p class="font-bold mb-2">Example Prompts:</p>
+                        <ul class="space-y-1">
+                            <li>"Create a function that calculates the average of an array of numbers"</li>
+                            <li>"Add error handling to this function"</li>
+                            <li>"Convert this code to use async/await instead of promises"</li>
+                            <li>"Create a simple React component for a contact form"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4">Vibe Coding Workflow in Cursor</h3>
+                <p class="mb-4">A typical vibe coding workflow using Cursor involves these steps:</p>
+                
+                <ol class="space-y-6">
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">1</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Start with a Clear Goal</h4>
+                            <p>Before coding, have a clear idea of what you want to build, such as "I want to create a simple weather app" or "I need a script to organize my files."</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">2</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Project Setup</h4>
+                            <p>Open Cursor, create a new folder for your project, and use AI Chat to help plan your project structure.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">3</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Initial Code Generation</h4>
+                            <p>Create your first file and use Composer to generate starter code based on your description.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">4</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Iterative Development</h4>
+                            <p>Describe features you want to add, review and apply the generated code, test the feature, and refine through conversation with the AI.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">5</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Expanding Your Project</h4>
+                            <p>Use AI Chat to brainstorm new features, break down complex features into smaller tasks, and use Composer to implement each part.</p>
+                        </div>
+                    </li>
+                </ol>
+                
+                <div class="mt-8 text-center">
+                    <a href="course.html#module2" class="btn btn-primary">Learn More in Module 2</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather App Project -->
+    <section id="project" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Weather App Project</h2>
+            
+            <div class="card mb-8">
+                <h3 class="text-xl font-bold mb-4">Project Overview</h3>
+                <p class="mb-4">In this project, you'll build a functional weather application using Cursor AI and vibe coding techniques. This step-by-step guide will walk you through the entire process, from setup to deployment.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">Features</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Search for weather by city name</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Display current weather conditions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Show temperature, humidity, and wind speed</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Visual representation of weather conditions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Clean, user-friendly interface</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-secondary mb-2">Technologies</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Python with Streamlit</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>OpenWeatherMap API</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Cursor AI for code generation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>No prior coding experience required</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="text-xl font-bold mb-4">Project Steps Preview</h3>
+                <ol class="space-y-4">
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">1</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Setting Up Your Project</h4>
+                            <p>Create a new project folder and set up the basic structure with Cursor AI.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">2</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Adding Weather API Integration</h4>
+                            <p>Connect to the OpenWeatherMap API to fetch weather data for different locations.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">3</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Enhancing the User Interface</h4>
+                            <p>Create a clean, intuitive interface for users to interact with the weather app.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">4</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Adding Additional Features</h4>
+                            <p>Implement features like a 5-day forecast, location maps, and sunrise/sunset times.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">5</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Error Handling and User Experience</h4>
+                            <p>Add error messages, loading animations, and other UX improvements.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">6</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Testing Your Application</h4>
+                            <p>Run and test your weather app to ensure everything works as expected.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">7</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Enhancing and Customizing</h4>
+                            <p>Add custom styling, animations, and additional features to make the app your own.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <span class="bg-secondary rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">8</span>
+                        <div>
+                            <h4 class="font-bold mb-1">Deploying Your Weather App</h4>
+                            <p>Learn how to deploy your app so others can use it.</p>
+                        </div>
+                    </li>
+                </ol>
+                
+                <div class="mt-8 text-center">
+                    <a href="course.html#module4" class="btn btn-primary">Access Full Project Guide in Module 4</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Resources -->
+    <section id="additional" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Additional Resources</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- AI Coding Tools -->
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">AI Coding Tools</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline font-bold">Cursor</a>
+                            <p class="text-gray-300">The AI code editor featured in this course.</p>
+                        </li>
+                        <li>
+                            <a href="https://replit.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline font-bold">Replit</a>
+                            <p class="text-gray-300">Browser-based coding environment with AI features.</p>
+                        </li>
+                        <li>
+                            <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline font-bold">GitHub Copilot</a>
+                            <p class="text-gray-300">AI pair programmer that integrates with various editors.</p>
+                        </li>
+                        <li>
+                            <a href="https://www.pythagora.ai" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline font-bold">Pythagora</a>
+                            <p class="text-gray-300">Specialized AI coding assistant for Python.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Learning Resources -->
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Learning Resources</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="https://docs.cursor.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline font-bold">Cursor Documentation</a>
+                            <p class="text-gray-300">Official documentation for Cursor.</p>
+                        </li>
+                        <li>
+                            <a href="https://openweathermap.org/api" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline font-bold">OpenWeatherMap API Docs</a>
+                            <p class="text-gray-300">Documentation for the weather API used in our project.</p>
+                        </li>
+                        <li>
+                            <a href="https://streamlit.io/docs" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline font-bold">Streamlit Documentation</a>
+                            <p class="text-gray-300">Learn more about the Streamlit framework for Python.</p>
+                        </li>
+                        <li>
+                            <a href="https://arstechnica.com/ai/2025/03/is-vibe-coding-with-ai-gnarly-or-reckless-maybe-some-of-both/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline font-bold">Ars Technica: Will the future of software development run on vibes?</a>
+                            <p class="text-gray-300">In-depth article about vibe coding and its implications.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 card">
+                <h3 class="text-xl font-bold mb-4">Community Forums</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="https://forum.cursor.com" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition-colors">
+                        <h4 class="font-bold text-secondary mb-2">Cursor Community Forum</h4>
+                        <p class="text-gray-300">Connect with other Cursor users and get help with issues.</p>
+                    </a>
+                    <a href="https://discuss.streamlit.io" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition-colors">
+                        <h4 class="font-bold text-secondary mb-2">Streamlit Forum</h4>
+                        <p class="text-gray-300">Discuss Streamlit development and get community support.</p>
+                    </a>
+                    <a href="https://www.reddit.com/r/ArtificialInteligence/" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition-colors">
+                        <h4 class="font-bold text-secondary mb-2">Reddit AI Community</h4>
+                        <p class="text-gray-300">Broader discussions about AI and its applications.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-br from-primary to-accent">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white">Ready to Start Your Vibe Coding Journey?</h2>
+            <p class="text-xl mb-8 text-gray-200">Now that you have access to all the resources, it's time to start building!</p>
+            <a href="course.html" class="btn bg-white text-primary hover:bg-gray-100 font-bold text-lg px-8 py-3">Begin the Course</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="rounded-lg bg-ai-report-burgundy p-2 mr-2">
+                            <span class="text-white font-bold text-xl">AI</span>
+                        </div>
+                        <h3 class="text-white text-xl font-bold">Vibe Coding Course</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-md">Learn to build software with AI without prior coding knowledge. A comprehensive course on vibe coding techniques.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Course</h4>
+                        <ul class="space-y-2">
+                            <li><a href="course.html#module1" class="text-gray-400 hover:text-white">Introduction</a></li>
+                            <li><a href="course.html#module2" class="text-gray-400 hover:text-white">Getting Started</a></li>
+                            <li><a href="course.html#module3" class="text-gray-400 hover:text-white">Core Techniques</a></li>
+                            <li><a href="course.html#module4" class="text-gray-400 hover:text-white">Weather App</a></li>
+                            <li><a href="course.html#module5" class="text-gray-400 hover:text-white">Advanced Strategies</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#installation" class="text-gray-400 hover:text-white">Installation Guide</a></li>
+                            <li><a href="#tutorial" class="text-gray-400 hover:text-white">Cursor Basics</a></li>
+                            <li><a href="#project" class="text-gray-400 hover:text-white">Project Guide</a></li>
+                            <li><a href="#additional" class="text-gray-400 hover:text-white">Additional Resources</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="faq.html" class="text-gray-400 hover:text-white">FAQ</a></li>
+                            <li><a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">Cursor Website</a></li>
+                            <li><a href="https://aireport.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">AI Report</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 Vibe Coding Course. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
