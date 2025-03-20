@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Vibe Coding with AI</title>
+    <meta name="description" content="Frequently asked questions about vibe coding, Cursor AI, and learning to build software with AI without prior coding knowledge.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="stylesheet" href="../css/additional.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Fira+Code:wght@400;500&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        code, pre {
+            font-family: 'Fira Code', monospace;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-text-light min-h-screen flex flex-col">
+    <!-- Header with AI Report branding -->
+    <header class="bg-ai-report-burgundy shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="rounded-lg bg-ai-report-burgundy p-2 mr-2">
+                        <span class="text-white font-bold text-xl">AI</span>
+                    </div>
+                    <h1 class="text-white text-2xl font-bold">Vibe Coding Course</h1>
+                </div>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="course.html" class="nav-link">Course Content</a>
+                    <a href="resources.html" class="nav-link">Resources</a>
+                    <a href="faq.html" class="nav-link nav-link-active">FAQ</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="../index.html" class="nav-link block">Home</a>
+                <a href="about.html" class="nav-link block">About</a>
+                <a href="course.html" class="nav-link block">Course Content</a>
+                <a href="resources.html" class="nav-link block">Resources</a>
+                <a href="faq.html" class="nav-link block">FAQ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="py-12 bg-gradient-to-r from-primary-dark to-accent">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4 text-white">Frequently Asked Questions</h1>
+            <p class="text-xl text-gray-200 max-w-3xl mx-auto">Find answers to common questions about vibe coding, Cursor AI, and learning to build with AI.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-8 bg-gray-800 sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#general" class="btn btn-primary">General Questions</a>
+                <a href="#vibe-coding" class="btn btn-primary">About Vibe Coding</a>
+                <a href="#cursor" class="btn btn-primary">Cursor AI</a>
+                <a href="#course" class="btn btn-primary">Course Questions</a>
+                <a href="#technical" class="btn btn-primary">Technical Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Questions -->
+    <section id="general" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">General Questions</h2>
+            
+            <div class="space-y-6">
+                <!-- Question 1 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">What is this course about?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>This course teaches you how to build software using AI tools without prior coding knowledge. It focuses on "vibe coding" - a technique where you describe what you want in natural language and let AI tools like Cursor generate the code for you. The course includes installation guides, tutorials, and a step-by-step project to build a weather app.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Do I need coding experience to take this course?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>No, this course is specifically designed for beginners with no prior coding experience. The whole point of vibe coding is that you can build software by describing what you want in natural language, without needing to understand traditional programming concepts or syntax.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Is this course free?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Yes, this course is completely free and accessible to everyone. However, some of the tools used in the course, like Cursor AI, may have free tiers with limitations or paid premium features. We'll clearly indicate when this is the case and provide alternatives where possible.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">How long does it take to complete the course?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>The course is self-paced, but most people can complete it in about 10-15 hours total. Each module takes approximately 1-3 hours to complete, depending on your pace and how much you experiment with the concepts. The weather app project might take an additional 2-4 hours to complete.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Vibe Coding -->
+    <section id="vibe-coding" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">About Vibe Coding</h2>
+            
+            <div class="space-y-6">
+                <!-- Question 1 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">What exactly is "vibe coding"?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Vibe coding is a term coined by Andrej Karpathy in February 2025 to describe an AI-dependent programming practice where you describe what you want in natural language and let AI tools generate the code. Instead of writing code line by line, you communicate with AI in conversational language, review the generated code, and iterate based on the results. The key aspect is that you don't need to fully understand the code being generated - you focus on the outcome rather than the implementation details.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Is vibe coding "real" programming?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>This is a subject of debate in the programming community. Vibe coding produces real, functional software, but it differs from traditional programming in that the developer may not fully understand the code being generated. Some argue that it's more like directing or guiding AI rather than programming in the traditional sense. However, the end result is still working software, and many consider it a valid approach to software development, especially for prototyping or personal projects.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">What are the limitations of vibe coding?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Vibe coding has several limitations:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-2">
+                            <li>Complex projects may be difficult to manage without understanding the underlying code</li>
+                            <li>Debugging can be challenging when you don't fully understand how the code works</li>
+                            <li>AI models have context limitations that restrict how much code they can process at once</li>
+                            <li>AI may generate code with bugs, security issues, or references to nonexistent functions</li>
+                            <li>Maintaining and evolving the codebase over time can be difficult</li>
+                            <li>It may not be suitable for mission-critical or security-sensitive applications</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Should I still learn traditional programming?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>While vibe coding makes software development accessible to beginners, there's still value in learning traditional programming concepts. Understanding programming fundamentals can help you:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-2">
+                            <li>Better communicate with AI tools</li>
+                            <li>Debug issues more effectively</li>
+                            <li>Understand and modify the generated code when necessary</li>
+                            <li>Work on more complex projects that may exceed AI's capabilities</li>
+                            <li>Have more career options in software development</li>
+                        </ul>
+                        <p class="mt-2">That said, vibe coding is a great starting point and may be sufficient for many personal projects and prototypes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursor AI -->
+    <section id="cursor" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Cursor AI</h2>
+            
+            <div class="space-y-6">
+                <!-- Question 1 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">What is Cursor AI?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Cursor is an AI-powered code editor designed to enhance programming productivity. It integrates large language models (like those from OpenAI or Anthropic) directly into the development environment, allowing you to generate code from natural language descriptions, get explanations of existing code, and receive intelligent suggestions as you type. Cursor is built on top of VS Code, so it has a familiar interface for those who have used that editor before.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Is Cursor free to use?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Cursor offers both free and paid plans:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-2">
+                            <li><strong>Free Plan:</strong> Includes basic AI features with some usage limits</li>
+                            <li><strong>Pro Plan:</strong> Offers higher usage limits, access to more powerful models, and additional features</li>
+                        </ul>
+                        <p class="mt-2">For this course, the free plan should be sufficient for most users. New users typically get a 14-day trial of Cursor Pro when they first sign up.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">What operating systems does Cursor support?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Cursor is available for:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-2">
+                            <li>Windows (Windows 10 or later, 64-bit)</li>
+                            <li>macOS (macOS 10.15 Catalina or later)</li>
+                            <li>Linux (Ubuntu 18.04 or later, or compatible distributions)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Are there alternatives to Cursor?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Yes, there are several alternatives to Cursor for AI-assisted coding:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-2">
+                            <li><strong>GitHub Copilot:</strong> AI pair programmer that integrates with various editors</li>
+                            <li><strong>Replit:</strong> Browser-based coding environment with AI features</li>
+                            <li><strong>Pythagora:</strong> Specialized AI coding assistant for Python</li>
+                            <li><strong>Codeium:</strong> Free AI coding assistant with plugins for various editors</li>
+                            <li><strong>Tabnine:</strong> AI code completion tool</li>
+                        </ul>
+                        <p class="mt-2">We focus on Cursor in this course because it's specifically designed for vibe coding and offers a comprehensive set of AI features in a user-friendly interface.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Questions -->
+    <section id="course" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Course Questions</h2>
+            
+            <div class="space-y-6">
+                <!-- Question 1 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">How is the course structured?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>The course is divided into six modules:</p>
+                        <ol class="list-decimal pl-6 mt-2 space-y-2">
+                            <li><strong>Module 1:</strong> Introduction to Vibe Coding</li>
+                            <li><strong>Module 2:</strong> Getting Started with Cursor</li>
+                            <li><strong>Module 3:</strong> Core Vibe Coding Techniques</li>
+                            <li><strong>Module 4:</strong> Practical Project - Weather App</li>
+                            <li><strong>Module 5:</strong> Advanced Vibe Coding Strategies</li>
+                            <li><strong>Module 6:</strong> Building Your Portfolio</li>
+                        </ol>
+                        <p class="mt-2">Each module includes text-based lessons, examples, and practical exercises. The course culminates in a complete project where you'll build a weather application using vibe coding techniques.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Can I skip modules or take them out of order?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>While the course is designed to be taken in sequence, you can skip modules or take them out of order if you already have experience with certain topics. For example, if you're already familiar with Cursor, you might skip Module 2. However, we recommend at least reviewing each module's content, as later modules build on concepts introduced earlier.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Will I get a certificate after completing the course?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Currently, we don't offer certificates of completion for this course. However, you'll have tangible projects (like the weather app) that you can add to your portfolio to demonstrate your skills.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">How can I get help if I'm stuck?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>If you get stuck while following the course:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-2">
+                            <li>Review the troubleshooting sections included in each module</li>
+                            <li>Check the Cursor community forum for similar issues and solutions</li>
+                            <li>Use AI tools like ChatGPT or Claude to help debug your specific problem</li>
+                            <li>Join online communities focused on AI coding, such as relevant Discord servers or Reddit communities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Support -->
+    <section id="technical" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Technical Support</h2>
+            
+            <div class="space-y-6">
+                <!-- Question 1 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">I'm having trouble installing Cursor. What should I do?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>If you're having trouble installing Cursor:</p>
+                        <ol class="list-decimal pl-6 mt-2 space-y-2">
+                            <li>Make sure your system meets the minimum requirements</li>
+                            <li>Try downloading the installer again from the official website</li>
+                            <li>Run the installer as administrator (on Windows)</li>
+                            <li>Temporarily disable antivirus software during installation</li>
+                            <li>Check the Cursor documentation for platform-specific troubleshooting</li>
+                        </ol>
+                        <p class="mt-2">If you're still having issues, visit the <a href="https://forum.cursor.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Cursor community forum</a> for additional help.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Cursor's AI features aren't working. How can I fix this?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>If Cursor's AI features aren't working:</p>
+                        <ol class="list-decimal pl-6 mt-2 space-y-2">
+                            <li>Check your internet connection - AI features require internet access</li>
+                            <li>Verify that you're logged into your Cursor account</li>
+                            <li>Check if you've reached usage limits on the free plan</li>
+                            <li>Restart Cursor</li>
+                            <li>Update to the latest version of Cursor</li>
+                            <li>Try clearing the application cache</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">What are the system requirements for the weather app project?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>For the weather app project, you'll need:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-2">
+                            <li>Cursor AI installed and working</li>
+                            <li>Python 3.7 or later (will be installed as part of the project setup)</li>
+                            <li>Internet connection for API access</li>
+                            <li>A free OpenWeatherMap API key (instructions provided in the project guide)</li>
+                            <li>Approximately 100MB of free disk space</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Can I use a different AI coding tool instead of Cursor?</h3>
+                        <i class="fas fa-chevron-down text-secondary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p>Yes, you can use other AI coding tools like GitHub Copilot, Replit, or Codeium to follow along with the course. However, the instructions and screenshots are specific to Cursor, so you may need to adapt them for your chosen tool. The core principles of vibe coding remain the same regardless of the specific tool you use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Still Have Questions?</h2>
+            <p class="text-xl mb-8">Check out these additional resources or join our community for more help.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://forum.cursor.com" target="_blank" rel="noopener noreferrer" class="card hover:shadow-xl transition-shadow">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cursor Community</h3>
+                    <p class="text-gray-300">Join the official Cursor forum to connect with other users and get help.</p>
+                </a>
+                
+                <a href="https://docs.cursor.com" target="_blank" rel="noopener noreferrer" class="card hover:shadow-xl transition-shadow">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cursor Documentation</h3>
+                    <p class="text-gray-300">Access the official documentation for detailed information about Cursor.</p>
+                </a>
+                
+                <a href="https://www.reddit.com/r/ArtificialInteligence/" target="_blank" rel="noopener noreferrer" class="card hover:shadow-xl transition-shadow">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fab fa-reddit"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">AI Community</h3>
+                    <p class="text-gray-300">Join discussions about AI and coding on Reddit and other platforms.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="rounded-lg bg-ai-report-burgundy p-2 mr-2">
+                            <span class="text-white font-bold text-xl">AI</span>
+                        </div>
+                        <h3 class="text-white text-xl font-bold">Vibe Coding Course</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-md">Learn to build software with AI without prior coding knowledge. A comprehensive course on vibe coding techniques.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Course</h4>
+                        <ul class="space-y-2">
+                            <li><a href="course.html#module1" class="text-gray-400 hover:text-white">Introduction</a></li>
+                            <li><a href="course.html#module2" class="text-gray-400 hover:text-white">Getting Started</a></li>
+                            <li><a href="course.html#module3" class="text-gray-400 hover:text-white">Core Techniques</a></li>
+                            <li><a href="course.html#module4" class="text-gray-400 hover:text-white">Weather App</a></li>
+                            <li><a href="course.html#module5" class="text-gray-400 hover:text-white">Advanced Strategies</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="resources.html#installation" class="text-gray-400 hover:text-white">Installation Guide</a></li>
+                            <li><a href="resources.html#tutorial" class="text-gray-400 hover:text-white">Cursor Basics</a></li>
+                            <li><a href="resources.html#project" class="text-gray-400 hover:text-white">Project Guide</a></li>
+                            <li><a href="resources.html#additional" class="text-gray-400 hover:text-white">Additional Resources</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="faq.html" class="text-gray-400 hover:text-white">FAQ</a></li>
+                            <li><a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">Cursor Website</a></li>
+                            <li><a href="https://aireport.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">AI Report</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 Vibe Coding Course. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+        // FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    // Toggle answer visibility
+                    answer.classList.toggle('hidden');
+                    
+                    // Rotate icon
+                    if (answer.classList.contains('hidden')) {
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
